@@ -1,0 +1,165 @@
+@import "includes/sass-bootstrap";
+
+
+/****************************************
+ *  TABLE OF CONTENT
+ *
+ *  1. Variables and Sass Functions
+ *  2. Basic structure
+ *
+ *  3. Header
+ *	4. Nav
+ *  5. Article (main content)
+ *  6. Footer (and footer nav)
+ *  7. Modal
+ *  10. SPECITIC MODULE OR FUNCTIONALITY
+ *    11. PROGRESS BAR
+ *    12. MAP ADVISOR / CLUSTER
+ *    13. MAP QUEBEC AREA
+ *
+ ****************************************/
+
+
+/**
+ * 1. VARIABLES AND SASS FUNCTIONS
+ */
+$gray: #332e2c;
+$red: #cc4533;
+$green: #20a57b;
+$yellow: #a69221;
+$beige: #f2ede1;
+
+
+/**
+ * 7. Modal
+ */
+
+.table {
+    display: table;
+}
+
+.table-cell {
+    display: table-cell;
+}
+
+.is-open {
+    transition: all 1s ease;
+    left: 0 !important;
+}
+
+
+
+/**
+* 11. SPECIFIC MODULE OR FUNCTIONALITY - PROGRESS BAR
+*/
+
+.progress {
+	background-color: #f5f5f5;
+	border-radius: 4px;
+	height: 20px;
+
+	.progress-bar {
+		width: 0;
+		height: 100%;
+		font-size: 12px;
+		line-height: 20px;
+		color: #fff;
+		text-align: center;
+		background-color: #428bca;
+		box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+		transition: width .6s ease;
+	}
+
+}
+
+.checkbox-information {
+	display: none;
+}
+
+
+
+/**
+* 12. SPECIFIC MODULE OR FUNCTIONALITY - MAP ADVISOR / CLUSTER
+*/
+
+
+.map-councillor-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    > .map {
+        height: 400px;
+    }
+
+    > .councillor-list {
+        position: absolute;
+        top: 15px;
+        background: lightblue;
+        transition: all 1s ease;
+    }
+
+}
+
+.cluster{
+	color: #FFFFFF;
+	text-align:center;
+	font-family: 'Arial, Helvetica';
+	font-size:11px;
+	font-weight:bold;
+}
+.cluster-1{
+	background-image:url(../images/m1.png);
+	line-height:53px;
+	width: 53px;
+	height: 52px;
+}
+.cluster-2{
+	background-image:url(../images/m2.png);
+	line-height:53px;
+	width: 56px;
+	height: 55px;
+}
+.cluster-3{
+	background-image:url(../images/m3.png);
+	line-height:66px;
+	width: 66px;
+	height: 65px;
+}
+
+
+
+
+/**
+* 13. SPECIFIC MODULE OR FUNCTIONALITY - MAP QUEBEC AREA
+*/
+
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    .councillor-list {
+        width: 300px;
+        right: 15px;
+        left: inherit !important;
+        padding: 0;
+
+        > ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            width: 260px;
+        }
+    }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }

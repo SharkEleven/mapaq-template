@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>MAPAQ</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href="assets/css/styles.css" rel="stylesheet" media="screen">
+</head>
+	<body>
+
+		<div class="container">
+
+
+			<div class="col-lg-12">
+
+				<input id="userzip" type="text" class="form-control js-zipValue" />
+				<input id="subUserZip" type="button" class="form-control" value="OK" />
+
+				<div class="map-councillor-wrapper">
+
+					<div id="js-council-map" class="col-md-12 map"></div>
+					<div id="js-councillor-list" class="col-xs-12 councillor-list">
+						<header class="table">
+							<a id="mapMenu" href="#" class="table-cell">fleche</a>
+							<h3 class="table-cell">Liste conseillers</h3>
+						</header>
+						<ul class="js-scroll scrollto">
+
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<script src="assets/js/library/jquery-1.11.0.js"></script>
+		<script src="assets/js/library/bootstrap.js"></script>
+		<script src="assets/js/library/jquery.scrollTo.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script src="assets/js//library/gmap3.min.js"></script>
+		<script src="assets/js/markers.js"></script>
+		<script src="assets/js/map_cluster.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/database.js"></script>
+
+
+
+
+
+		<!-- AUTO GENERER EN PHP -->
+		<script>
+			for( i in markers ) {
+				$( ".js-scroll" ).append( "<li class='js-marker-" + markers[i].data.id + "''>" + markers[i].data.name + "</li>" );
+			}
+		</script>
+
+
+	</body>
+</html>
